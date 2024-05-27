@@ -1,0 +1,10 @@
+<IfModule mod_rewrite.c>
+    
+    Options -Indexes
+    RewriteEngine on
+    RewriteRule ^$ public/$1 [L]
+    RewriteRule (.*) public/$1 [L]
+
+     ErrorDocument 403 http://localhost/qb/public/ 
+
+</IfModule>
